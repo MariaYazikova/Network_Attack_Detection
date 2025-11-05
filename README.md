@@ -90,13 +90,13 @@
    - Для сборки выполните:
 
    ```bash
-   g++ xgb_inference.cpp -o xgb_inference -Ixgboost/include -Lxgboost/lib -lxgboost
+   g++ xgb_inference.cpp -o xgb_inference.exe -Ixgboost/include -Lxgboost/lib -lxgboost
    ```
 
    - Для запуска:
 
    ```
-   ./xgb_inference
+   .\xgb_inference.exe
    ```
 
 3. **Подготовка данных** (опционально, данные не включены в репозиторий):
