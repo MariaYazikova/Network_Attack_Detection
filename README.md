@@ -68,6 +68,11 @@
 
 ## Инструкция по сборке и запуску
 
+1. **Клонирование репозитория**:
+   ```
+   git clone https://github.com/MariaYazikova/Network_Attack_Detection.git
+   cd Network_Attack_Detection
+   ```
 1. **Настройка среды C++**:
 
    - Убедитесь, что установлен MinGW (g++)
@@ -85,7 +90,7 @@
      }
      ```
 
-2. **Сборка и запуск инференса**:
+1. **Сборка и запуск инференса**:
 
    - Для сборки выполните:
 
@@ -99,7 +104,7 @@
    .\xgb_inference.exe
    ```
 
-3. **Подготовка данных** (опционально, данные не включены в репозиторий):
+1. **Подготовка данных** (опционально, данные не включены в репозиторий):
 
    - Скачать исходный датасет [Cleaned CICID2017 c KAggle](https://www.kaggle.com/datasets/ernie55ernie/cleaned-cicids2017).
    - Сохранить файл `cleaned_improved_cicids2017.csv` в папку `datasets/`
