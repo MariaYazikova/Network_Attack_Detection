@@ -1,0 +1,80 @@
+
+Модель: LogisticRegression
+Accuracy: 0.9842
+Balanced Accuracy: 0.9718
+Precision (weighted): 0.9858
+Recall (weighted): 0.9842
+F1 (macro): 0.9129
+F1 (weighted): 0.9844
+
+Классификационный отчёт:                         precision    recall  f1-score   support
+
+                 BENIGN       1.00      0.99      0.99    318909
+                   DDoS       1.00      1.00      1.00     19029
+          DoS GoldenEye       0.90      1.00      0.95      1513
+               DoS Hulk       1.00      1.00      1.00     31694
+       DoS Slowhttptest       0.50      1.00      0.67       348
+          DoS Slowloris       0.84      1.00      0.92       772
+Infiltration - Portscan       0.93      0.80      0.86     14353
+               Portscan       0.87      0.99      0.93     31813
+
+               accuracy                           0.98    418431
+              macro avg       0.88      0.97      0.91    418431
+           weighted avg       0.99      0.98      0.98    418431
+
+Матрица ошибок сохранена в metrics/plots/confusion_matrix_LogisticRegression.png
+
+Модель: RandomForest
+Accuracy: 0.9944
+Balanced Accuracy: 0.9850
+Precision (weighted): 0.9944
+Recall (weighted): 0.9944
+F1 (macro): 0.9845
+F1 (weighted): 0.9944
+
+Классификационный отчёт:                         precision    recall  f1-score   support
+
+                 BENIGN       1.00      1.00      1.00    318909
+                   DDoS       1.00      1.00      1.00     19029
+          DoS GoldenEye       1.00      1.00      1.00      1513
+               DoS Hulk       1.00      1.00      1.00     31694
+       DoS Slowhttptest       1.00      1.00      1.00       348
+          DoS Slowloris       1.00      1.00      1.00       772
+Infiltration - Portscan       0.91      0.93      0.92     14353
+               Portscan       0.97      0.96      0.96     31813
+
+               accuracy                           0.99    418431
+              macro avg       0.98      0.98      0.98    418431
+           weighted avg       0.99      0.99      0.99    418431
+
+Матрица ошибок сохранена в metrics/plots/confusion_matrix_RandomForest.png
+
+Модель: XGBoost
+Accuracy: 0.9948
+Balanced Accuracy: 0.9851
+Precision (weighted): 0.9948
+Recall (weighted): 0.9948
+F1 (macro): 0.9854
+F1 (weighted): 0.9948
+
+Классификационный отчёт:                         precision    recall  f1-score   support
+
+                 BENIGN       1.00      1.00      1.00    318909
+                   DDoS       1.00      1.00      1.00     19029
+          DoS GoldenEye       1.00      1.00      1.00      1513
+               DoS Hulk       1.00      1.00      1.00     31694
+       DoS Slowhttptest       0.99      1.00      0.99       348
+          DoS Slowloris       1.00      1.00      1.00       772
+Infiltration - Portscan       0.93      0.92      0.92     14353
+               Portscan       0.96      0.97      0.97     31813
+
+               accuracy                           0.99    418431
+              macro avg       0.99      0.99      0.99    418431
+           weighted avg       0.99      0.99      0.99    418431
+
+Матрица ошибок сохранена в metrics/plots/confusion_matrix_XGBoost.png
+
+Сводная таблица:             Model  Accuracy  Balanced_Accuracy  Precision_weighted  Recall_weighted  F1_macro  F1_weighted
+           XGBoost    0.9948             0.9851              0.9948           0.9948    0.9854       0.9948
+      RandomForest    0.9944             0.9850              0.9944           0.9944    0.9845       0.9944
+LogisticRegression    0.9842             0.9718              0.9858           0.9842    0.9129       0.9844

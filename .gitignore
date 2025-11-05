@@ -1,0 +1,7 @@
+datasets/cleaned_improved_cicids2017.csv
+datasets/prepared_data.pkl
+
+*.exe
+*.pyc
+__pycache__/
+.vscode/
