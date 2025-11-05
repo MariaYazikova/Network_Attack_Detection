@@ -26,7 +26,7 @@
 ## Описание работы
 
 1. **Выбор датасета:**
-   - Для обучения модел использовался датасет с [Cleaned CICID2017 c KAggle](https://www.kaggle.com/datasets/ernie55ernie/cleaned-cicids2017) - очищенная и подготовленная версия официального CICIDS2017. Он содержит реальные сетевые трафики с нормальными соединениями и различными типами атак и широко применяется для разработки систем обнаружения вторжений.
+   - Для обучения модели использовался датасет с [Cleaned CICID2017 c Kaggle](https://www.kaggle.com/datasets/ernie55ernie/cleaned-cicids2017) - очищенная и подготовленная версия официального CICIDS2017. Он содержит реальные сетевые трафики с нормальными соединениями и различными типами атак и широко применяется для разработки систем обнаружения вторжений.
 2. **Подготовка данных:**
    - Реализована в `data_prep.py`.
    - Из исходного датасета были отобраны 8 классов: BENIGN, DoS Slowloris, DoS Slowhttptest, DoS Hulk, DoS GoldenEye, Infiltration - Portscan, Portscan, DDoS. Метки были закодированы, числовые признаки - масштабированы.
@@ -53,16 +53,18 @@
    - В файле выполняется:
    1. Загрузка модели через XGBoost C API.
    2. Чтение и преобразование входных данных в матрицу признаков.
-   3. Выполнение предскзаания классов для каждой строки.
+   3. Выполнение предсказания классов для каждой строки.
    - Для тестовых примеров модель корректно предсказала все 8 классов:
+   ```
      Row 0: Predicted class = 0 (BENIGN)
      Row 1: Predicted class = 1 (DoS Slowloris)
-     Row 2: Predicted class = 2 (DoS Slowhttptest)  
+     Row 2: Predicted class = 2 (DoS Slowhttptest)
      Row 3: Predicted class = 3 (DoS Hulk)
      Row 4: Predicted class = 4 (DoS GoldenEye)
      Row 5: Predicted class = 5 (Infiltration - Portscan)
      Row 6: Predicted class = 6 (Portscan)
      Row 7: Predicted class = 7 (DDoS)
+   ```
 
 ## Инструкция по сборке и запуску
 
@@ -97,7 +99,7 @@
    ./xgb_inference
    ```
 
-3. **Подготовка данных** (опционально, не включено в репозиторий):
+3. **Подготовка данных** (опционально, данные не включены в репозиторий):
 
    - Скачать исходный датасет [Cleaned CICID2017 c KAggle](https://www.kaggle.com/datasets/ernie55ernie/cleaned-cicids2017).
    - Сохранить файл `cleaned_improved_cicids2017.csv` в папку `datasets/`
